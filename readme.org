@@ -1,0 +1,2 @@
+* Advent of Code 2020
+Solutions are currently written in JavaScript (Node.js). I'll probably write alternative solutions in Rust and Java (which I'm trying to learn).

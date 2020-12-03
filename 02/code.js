@@ -1,4 +1,6 @@
-const input = require("fs").readFileSync("./2.txt", "utf-8");
+const { join } = require("path");
+const { readFileSync } = require("fs");
+const input = readFileSync(join(__dirname, "./input.txt"), "utf-8");
 const passwords = input.split("\n").filter(Boolean);
 
 const parsedPasswords = passwords.map(input => {

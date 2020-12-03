@@ -1,4 +1,6 @@
-const input = require("fs").readFileSync("./1.txt", "utf-8");
+const { join } = require("path");
+const { readFileSync } = require("fs");
+const input = readFileSync(join(__dirname, "./input.txt"), "utf-8");
 const numbers = input.split("\n").map(string => Number(string));
 const { length } = numbers;
 

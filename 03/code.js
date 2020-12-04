@@ -11,25 +11,25 @@ const getValue = (row, col) => {
 };
 
 const countTrees = (rowInc, colInc) => {
-    let trees = 0;
-    let row = 0;
-    let col = 0;
+  let trees = 0;
+  let row = 0;
+  let col = 0;
 
-    while (row < rows) {
-        if (isTree(getValue(row, col))) {
-            trees++;
-        }
-        row += rowInc;
-        col += colInc;
+  while (row < rows) {
+    if (isTree(getValue(row, col))) {
+        trees++;
     }
+    row += rowInc;
+    col += colInc;
+  }
 
-    return trees;
+  return trees;
 }
 
 console.log(countTrees(1, 3));
 
 const product = [[1, 1], [1, 3], [1, 5], [1, 7], [2, 1]].reduce((prod, [rowInc, colInc]) => {
-    return prod * countTrees(rowInc, colInc);
+  return prod * countTrees(rowInc, colInc);
 }, 1);
 
 console.log(product);
